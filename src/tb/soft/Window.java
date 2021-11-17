@@ -31,7 +31,6 @@ public class Window extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JLabel log_in_label = new JLabel("User: ");
-        log_in_label.setBounds(10,10 ,10,10 );
         set_element(panel, log_in_label, 0, 0);
 
         JTextField name = new JTextField(10);
