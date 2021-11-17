@@ -30,20 +30,20 @@ public class Window extends JFrame {
         setBounds(450, 300, 300, 150);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        JLabel log_in_label = new JLabel("Login: ");
+        JLabel log_in_label = new JLabel("User: ");
         log_in_label.setBounds(10,10 ,10,10 );
         set_element(panel, log_in_label, 0, 0);
 
         JTextField name = new JTextField(10);
         set_element(panel, name, 1, 0);
 
-        JLabel password = new JLabel("Hasło: ");
+        JLabel password = new JLabel("Password: ");
         set_element(panel, password, 0, 1);
 
         JPasswordField key = new JPasswordField(10);
         set_element(panel, key, 1, 1);
 
-        JButton log_in = new JButton("Zaloguj");
+        JButton log_in = new JButton("Login");
         JButton cancel = new JButton("Cancel");
 
         log_in.addActionListener(new ActionListener() {
