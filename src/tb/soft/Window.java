@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class Window extends JFrame {
 
-    private Map<String, String> user_data = new HashMap<>();
+    private final Map<String, String> user_data = new HashMap<>();
 
     public Window() throws HeadlessException {
         this("Undefined");
