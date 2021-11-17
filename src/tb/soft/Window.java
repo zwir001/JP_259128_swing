@@ -52,7 +52,6 @@ public class Window extends JFrame {
                 check_data(name, key, panel);
             }
         });
-        //log_in.setBounds(20,200,90, 23);
         set_element(panel, log_in,0, 2);
         cancel.addActionListener(new ActionListener() {
             @Override
