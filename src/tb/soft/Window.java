@@ -24,11 +24,14 @@ public class Window extends JFrame {
     private void build_UI(){
         JPanel panel= new JPanel();
         add(panel);
-        GridBagConstraints c = new GridBagConstraints();
-        setBounds(450, 300, 600, 350);
+        panel.setLayout(new GridBagLayout());
+        panel.setBackground(Color.white);
+
+        setBounds(450, 300, 300, 150);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JLabel log_in_label = new JLabel("Login: ");
+        log_in_label.setBounds(10,10 ,10,10 );
         set_element(panel, log_in_label, 0, 0);
 
         JTextField name = new JTextField(10);
@@ -54,7 +57,7 @@ public class Window extends JFrame {
         cancel.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                reset(name, key, panel);
             }
         });
         set_element(panel, cancel, 1, 2);
@@ -68,7 +71,7 @@ public class Window extends JFrame {
         GridBagConstraints c = new GridBagConstraints();
         c.gridx = x;
         c.gridy = y;
-        panel.add(element);
+        panel.add(element, c);
     }
 
     private void check_data( JTextField name, JPasswordField password, JPanel panel ) {
@@ -81,6 +84,13 @@ public class Window extends JFrame {
             panel.setBackground(Color.red);
             }
     }
+
+    private void reset(JTextField name, JPasswordField password, JPanel panel){
+        name.setText("");
+        password.setText("");
+        panel.setBackground(Color.white);
+    }
+
     private void test_users(){
         add_user("student", "student");
         add_user("teacher", "1234");
