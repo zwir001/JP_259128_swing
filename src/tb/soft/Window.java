@@ -41,6 +41,7 @@ public class Window extends JFrame {
 
         JPasswordField key = new JPasswordField(10);
         set_element(panel, key, 1, 1);
+        key.setEchoChar('×');
 
         JButton log_in = new JButton("Login");
         JButton cancel = new JButton("Cancel");
