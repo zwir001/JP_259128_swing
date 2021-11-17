@@ -71,6 +71,8 @@ public class Window extends JFrame {
         c.gridx = x;
         c.gridy = y;
         panel.add(element, c);
+        Font font=new Font(Font.DIALOG_INPUT,  Font.BOLD|Font.ITALIC, 15);
+        element.setFont(font);
     }
 
     private void check_data( JTextField name, JPasswordField password, JPanel panel ) {
